@@ -1,0 +1,87 @@
+li{
+    background-color: #004151;
+    display: flex;
+   padding: 5px;
+   justify-content: space-between;
+   font-size: 20px;
+   color: white;
+   margin: 10px 0;
+    justify-items: center;
+   
+}
+ul{
+    list-style-type: none;
+  
+}
+h1{
+    background-color: #002b3a;
+    color: white;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.light{
+    max-width: 600px;
+     margin: auto;
+     margin-top: 50px;
+    position: relative;
+    min-height: 80lvh;
+    
+}
+.grow{
+    padding-bottom: 60px;
+}
+.hello{
+padding: 0 10px;
+min-height: 100vh;
+}
+.hand{
+    display: flex;
+    gap: 5px;
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+   
+}
+.btn{
+    padding:10px 25px ;
+    background-color: #002b3a;
+    color: white;
+}
+button{
+    padding: 0 10px;
+    
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+span{
+    display: flex;
+    gap: 20px;
+    justify-items: center;
+    
+}
+input{
+    width: 100%;
+    padding: 7px;
+    background-color: gainsboro;
+
+}
+.bt{
+    background-color: #002b3a;
+    color: white;
+    font-size: 20px;
+    padding: 5px 15px;
+    margin-bottom: 10px;
+}
+.checkbox{
+    width: 25px;
+    height: 25px;
+}
+
+.times{
+    width: 25px;
+        height: 25px;
+}
