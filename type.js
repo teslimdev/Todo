@@ -60,17 +60,22 @@ button.addEventListener("click", (e) => {
 
   const lists = ul.querySelectorAll('li')
       lists.forEach(list=>{
+        let presstimer;
         list.addEventListener('touchstart', (e)=>{
-          setTimeout(()=>{
+          presstimer = setTimeout(()=>{
              checks.forEach(check=>{
         check.style.display='flex'
         
        })
           },2000)
-      
-
        
     })
+
+    list.addEventListener('touchend', ()=>{
+      clearTimeout(presstimer);
+    })
+
+
       })
     
    
@@ -80,6 +85,7 @@ button.addEventListener("click", (e) => {
        if(e.target.checked){
         checks.forEach(check=>{
           check.checked = true
+          clear.style.display = "block";
         })
        }else{
          checks.forEach(check=>{
