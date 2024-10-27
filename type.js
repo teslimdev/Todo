@@ -66,7 +66,7 @@ button.addEventListener("click", (e) => {
         check.style.display='flex'
         
        })
-          },500)
+          },2000)
       
 
        
