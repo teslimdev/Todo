@@ -77,9 +77,13 @@ button.addEventListener("click", (e) => {
 
      hit.addEventListener('click',(e)=>{
       console.log(e.target)
-       if(e.target){
+       if(e.target.checked){
         checks.forEach(check=>{
           check.checked = true
+        })
+       }else{
+         checks.forEach(check=>{
+          check.checked = false
         })
        }
      })
