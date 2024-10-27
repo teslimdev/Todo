@@ -2,16 +2,20 @@ const ul = document.querySelector("ul");
 const todos = document.querySelector(".todo");
 const button = document.querySelector(".btn");
 const clear = document.querySelector(".bt");
+ const hit = document.querySelector('.checkeds')
+
 
 if (!ul.children.length) {
   clear.style.display = "none";
 }
+ hit.style.display='none';
+
 
 button.addEventListener("click", (e) => {
   if (todos.value) {
     e.preventDefault();
     const li = document.createElement("li");
-    li.innerHTML = `<span><input type="checkbox" class='checkbox'> ${todos.value} </span> <button class='times'>X</button>`;
+    li.innerHTML = `<span ><input type="checkbox" class='checkbox' style='display:none;'> ${todos.value} </span> <button class='times'>X</button>`;
     ul.appendChild(li);
 
     const deletes = li.querySelector(".times");
@@ -22,8 +26,11 @@ button.addEventListener("click", (e) => {
         clear.style.display = "none";
       }
     });
-    const checkbox = li.querySelector(".checkbox");
+      const hit = document.querySelector('.checkeds')
 
+     
+    const checkbox = li.querySelector(".checkbox");
+    const checks =ul.querySelectorAll('.checkbox')
     checkbox.addEventListener("click", (e) => {
       console.log(e);
 
@@ -33,8 +40,7 @@ button.addEventListener("click", (e) => {
       );
 
       clear.style.display = anyChecked ? "block" : "none";
-
-     
+      hit.style.display=anyChecked ? 'block' : 'none';
     });
 
 
@@ -45,8 +51,38 @@ button.addEventListener("click", (e) => {
             const lis = checkbox.closest('li')
                 ul.removeChild(lis)
                 clear.style.display = "none";
+                hit.checked=false;
+                hit.style.display = "none";
+
             }
          })
       });
+
+  const lists = ul.querySelectorAll('li')
+      lists.forEach(list=>{
+        list.addEventListener('touchstart', (e)=>{
+          setTimeout(()=>{
+             checks.forEach(check=>{
+        check.style.display='flex'
+        
+       })
+          },500)
+      
+
+       
+    })
+      })
+    
+   
+
+     hit.addEventListener('click',(e)=>{
+      console.log(e.target)
+       if(e.target){
+        checks.forEach(check=>{
+          check.checked = true
+        })
+       }
+     })
+
   }
 });

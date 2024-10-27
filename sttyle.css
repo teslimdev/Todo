@@ -2,6 +2,7 @@ li{
     background-color: #004151;
     display: flex;
    padding: 5px;
+   padding-left: 10px;
    justify-content: space-between;
    font-size: 20px;
    color: white;
@@ -63,8 +64,11 @@ span{
     justify-items: center;
     
 }
+.checkeds{
+    padding: 70px  !important;
+}
 input{
-    width: 100%;
+    width: 100% ;
     padding: 7px;
     background-color: gainsboro;
 
