@@ -84,6 +84,7 @@ button.addEventListener("click", (e) => {
        }else{
          checks.forEach(check=>{
           check.checked = false
+           clear.style.display = "none";
         })
        }
      })
